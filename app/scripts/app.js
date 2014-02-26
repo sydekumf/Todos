@@ -1,8 +1,13 @@
 Todos = window.Todos = Ember.Application.create();
 
-Todos.ApplicationAdapter = DS.FixtureAdapter.extend();
-
+require('scripts/libs/*');
 require('scripts/Router');
 require('scripts/Models/*');
 require('scripts/Controllers/*');
 require('scripts/Views/*');
+
+//Todos.ApplicationAdapter = DS.FixtureAdapter.extend();
+
+Todos.ApplicationAdapter = DS.LSAdapter.extend({
+    namespace: 'todos-emberjs'
+});
