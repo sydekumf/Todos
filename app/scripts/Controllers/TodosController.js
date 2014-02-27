@@ -1,4 +1,4 @@
-Todos.TodosController = Ember.ArrayController.extend({
+Todos.ApplicationController = Ember.ArrayController.extend({
     actions: {
         createTodo: function() {
             var title = this.get('newTitle');
